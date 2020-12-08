@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+
+<!-- <form action="/regsiter" method="post">
+  <input type="text" name="username" class="form-control" id="username" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+  <input type="password" class="form-control" name="password" id="password"/>
+</form> -->
+
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Register</h2>
+      </div>
+      <div class="row w-50 mx-auto">
+        <div class="col-lg mt-5 mt-lg-0 php-email-form">
+          <form action="/register" method="post">
+            <div class="form-row">
+              <div class="form-group col-md">
+                <label for="name">Username</label>
+                <input type="text" name="username" class="form-control" id="username" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md">
+                <label for="name">Email</label>
+                <input type="email" name="email" class="form-control" id="email" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" name="password" id="password"/>
+            </div>
+            <div class='text-center'><button type="submit">Register</button></div>
+            <div class="text-center mt-2 mb-0+"><a href="/login">Already have an account?</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Contact Section -->
+
+  <%- include('partials/footer.ejs') %>

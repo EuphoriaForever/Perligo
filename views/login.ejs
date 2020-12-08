@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Login</h2>
+      </div>
+      <div class="row w-50 mx-auto">
+        <div class="col-lg mt-5 mt-lg-0 php-email-form">
+          <form action="/login" method="post">
+            <div class="form-row">
+              <div class="form-group col-md">
+                <% if(error){ %>
+                <p class="text-center alert alert-danger">Incorrect Credentials</p>
+                <% } %>
+                <label for="name">Username</label>
+                <input type="text" name="username" class="form-control" id="username"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" name="password" id="password"/>
+            </div>
+            <div class="text-center"><button type="submit" id="headerlogin">Login</button></div>
+            <div class="text-center mt-2 mb-0"><a href="/register">New user? Register here</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Contact Section -->
+
+  <%- include('partials/footer.ejs') %>

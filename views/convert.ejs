@@ -1,0 +1,61 @@
+<%- include('partials/header.ejs') %>
+
+<section id="contact" class="contact">
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Convert with link</h2>
+    </div>
+    <div class="row w-75 mx-auto">
+      <!-- <form action="/login" method="post" role="form">
+              !!!   Add forms that encompasses all cards   !!!
+      </form> -->
+      <div class="col mt-5 mt-lg-0 d-flex align-items-stretch">
+        <div class="php-email-form">
+          <br>
+          <div class="row">
+            <h4>Please insert a valid video URL</h4>
+          </div>
+          <br>
+          <form action="/convert" method="post">
+            <div class="form-row">
+              <div class="input-group">
+                <input type="text" name="url" class="form-control mr-3" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="submit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert</button>
+                  <div class="dropdown-menu" name="convert">
+                    <button class="dropdown-item" name="type" value="mp3">Convert to MP3</button>
+                    <button class="dropdown-item" type="button" data-toggle="modal" data-target="#demoerror">Convert to text</button>
+                    <button class="dropdown-item" type="button" data-toggle="modal" data-target="#demoerror">Convert to MP3 and text</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+        </div>
+        <br>
+      </div>
+</section><!-- End Contact Section -->
+
+<!-- Modal -->
+<div class="modal fade" id="demoerror" tabindex="-1" aria-labelledby="demoerrorlabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="demoerrorlabel">OOPS!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This feature is not available in the demo version of the product.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

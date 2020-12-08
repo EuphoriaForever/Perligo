@@ -1,0 +1,77 @@
+<%- include('partials/header.ejs') %>
+
+<section id="contact" class="contact">
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="section-title">
+      <h2>File Sharing</h2>
+    </div>
+    <div class="row w-75 mx-auto">
+      <!-- <form action="/login" method="post" role="form">
+              !!!   Add forms that encompasses all cards   !!!
+      </form> -->
+      <% if(loggedin){ %>
+        <div class="col mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="php-email-form">
+            <div class="row">
+              <h4>Select Files</h4>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md">
+                <!-- add recordings nga picture -->
+                <label for="name">Username</label>
+                <div class="file">
+                  <div class="row file-container">
+                    <div class="col-4 file-item">
+                      <div class="file-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+                      <div class="file-info">
+                        <h4>Recording 1</h4>
+                        <p>112 mb</p>
+                      </div>
+                    </div>
+                    <div class="col-4 file-item">
+                      <div class="file-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+                      <div class="file-info">
+                        <h4>Recording 2</h4>
+                        <p>300 mb</p>
+                      </div>
+                    </div>
+                    <div class="col-4 file-item">
+                      <div class="file-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+                      <div class="file-info">
+                        <h4>Recording 3</h4>
+                        <p>681 mb</p>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="validate"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="php-email-form">
+            <div class="row">
+              <h4>Send To...</h4>
+            </div>
+            <div class="team">
+              
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+            </div>
+          </div>
+        </div>
+      <% } else { %>
+          <div class="php-email-form">
+            <div class="col">
+              <h3 class="text-center mb-4">Please login to continue</h3>
+              <p class="text-center"><strong>Click here to <a href="/login">log in</a></strong></p>
+            </div>
+          </div>
+      <% } %>
+    </div>
+  </div>
+</section><!-- End Contact Section -->
+
+<%- include('partials/footer.ejs') %>
