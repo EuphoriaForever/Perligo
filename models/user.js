@@ -8,9 +8,17 @@ const account = instance.sequelize.define("drive",{
         primaryKey:true,
         type:DataTypes.INTEGER
       },
-      account_id:{
-        allowNull:false,
-        type:DataTypes.INTEGER
+      username:{
+        type:DataTypes.STRING,
+        allowNull:false
+      },
+      password:{
+        type:DataTypes.STRING,
+        allowNull:false
+      },
+      email:{
+        type:DataTypes.STRING,
+        allowNull:false
       },
     
   },
@@ -18,8 +26,8 @@ const account = instance.sequelize.define("drive",{
         createdAt:true,
         updatedAt:true,
         deletedAt:true,
-        tableName:"drive"
+        tableName:"users"
     }
 )
 
-exports.drive = drive;
+exports.user = user;

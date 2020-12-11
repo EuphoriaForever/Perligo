@@ -19,7 +19,8 @@ const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'perligo'
+    database: 'perligo',
+    multipleStatements: true
 })
 
 var sess
@@ -48,6 +49,7 @@ app.post("/register", (req, res)=>{
     connection.query(qry, (err) =>{
         if (err) throw err;
     });
+    
     res.redirect("/login");
 })
 
