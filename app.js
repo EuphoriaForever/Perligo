@@ -130,7 +130,7 @@ app.post("/convert", (req, res)=>{
         .pipe(cloudconvert.convert({
             "inputformat": "mp4",
             "outputformat": "mp3",
-        })).pipe(fs.createWriteStream('output.mp3'))
+        })).pipe(fs.createWriteStream(req.body.OutPutUrl+".mp3"))
         .on('finish', function() {
             console.log("Conversion has finished!");
         });
