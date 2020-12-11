@@ -9,12 +9,16 @@ const bodyParser = require('body-parser');
 const urlEncodedParser = bodyParser.urlencoded({extended: true})
 const { worker } = require("cluster");
 
+const userControl = require('./controllers/userController');
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(session({secret: 'fletcher', saveUninitialized: true, resave: true}))
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+
 const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
@@ -41,7 +45,7 @@ app.get("/login", (req, res)=>{
 app.get("/register", (req, res)=>{
     res.render('register', {loggedin: ''});
 });
-
+/*
 app.post("/register", (req, res)=>{
     let salt = bcrypt.genSaltSync(saltRounds);
     let hash = bcrypt.hashSync(req.body.password, salt); 
@@ -51,6 +55,13 @@ app.post("/register", (req, res)=>{
     });
     
     res.redirect("/login");
+})
+*/
+
+app.post("/register",urlEncodedParser,async(req,res)=>{
+   await userControl.createAccount(req);
+   console.log("ADDING NEW ACCOUNT");
+   res.redirect("/login");
 })
 
 app.post("/login", (req, res)=>{

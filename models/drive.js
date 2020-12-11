@@ -1,7 +1,7 @@
 const {DataTypes,DATE} = require("sequelize");
 const instance = require("../dbconnection");
 
-const account = instance.sequelize.define("drive",{
+const drive = instance.sequelize.define("drive",{
     id:{
         allowNull:false,
         autoIncrement:true,
