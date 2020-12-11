@@ -176,7 +176,7 @@ app.get("/convertMP3", (req, res)=>{
     "outputformat": "mp3",
     }))
     console.log("Starting conversion. Please don't quit the webpage until conversion has finished.")
-    .pipe(fs.createWriteStream('output.mp3'))
+    .pipe(fs.createWriteStream(req.body.OutPutUrl+".mp3"))
     .on('finish', function() {
         console.log("Conversion has finished!");
     });
