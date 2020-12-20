@@ -1,8 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
 const app = express();
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+
 const mysql = require('mysql')
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -10,6 +9,7 @@ const urlEncodedParser = bodyParser.urlencoded({extended: true})
 const { worker } = require("cluster");
 
 const userControl = require('./controllers/userController');
+const driveControl = require('./controllers/driveController');
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -45,38 +45,30 @@ app.get("/login", (req, res)=>{
 app.get("/register", (req, res)=>{
     res.render('register', {loggedin: ''});
 });
-/*
-app.post("/register", (req, res)=>{
-    let salt = bcrypt.genSaltSync(saltRounds);
-    let hash = bcrypt.hashSync(req.body.password, salt); 
-    let qry = 'INSERT INTO users(username, email, password) VALUES("'+req.body.username+'", "'+req.body.email+'", "'+hash+'")';
-    connection.query(qry, (err) =>{
-        if (err) throw err;
-    });
-    
-    res.redirect("/login");
-})
-*/
 
 app.post("/register",urlEncodedParser,async(req,res)=>{
-   await userControl.createAccount(req);
-   console.log("ADDING NEW ACCOUNT");
-   res.redirect("/login");
+  let issOkay= await userControl.createAccount(req);
+  if(issOkay==true){
+    console.log("ADDING A DRIVE");
+    driveControl.createDrive(req);
+    res.redirect("/login");
+  }else{
+      res.redirect('/register');
+  }
+
 })
 
-app.post("/login", (req, res)=>{
-    sess = req.session;
-    let qry = 'SELECT * FROM users WHERE username="'+req.body.username+'"';
-    connection.query(qry, (err, response) =>{
-        if(err){
-            throw err;
-        } else if(response.length > 0 && bcrypt.compareSync(req.body.password, response[0]['password'])){
-            sess.loggedin = true;
-            res.redirect('/');
-        } else {
-            res.render('login', {loggedin: '', error: true});
-        }
-    });
+app.post("/login", urlEncodedParser,async(req, res)=>{
+  sess = req.session;
+   
+  let isOkay = await userControl.authentication(req);
+
+    if(isOkay==true){
+        sess.loggedin = true;
+        res.redirect('/');
+    }else{
+        res.render('login', {loggedin: '', error: true});
+    }
 });
 
 app.get("/filesharing", (req, res)=>{
@@ -193,6 +185,10 @@ app.get("/convertMP3", (req, res)=>{
     .on('finish', function() {
         console.log("Conversion has finished!");
     });
+
+    if(loggedin==true){
+       
+    }
 });
 
 app.get("/drive", (req, res)=>{
