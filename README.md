@@ -1,3 +1,3 @@
 # Perligo
 
-1. import .sql file on ur own php
+<b>In regards to creating the Perligo Database</b>
