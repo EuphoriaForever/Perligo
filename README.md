@@ -9,7 +9,7 @@ While the capability of converting .mp4 files into .mp3 files remains true, the 
 1. In your phpmyadmin, create a database named 'perligo'
 2. assuming that you have cloned this repository
   ->proceed to a cmd terminal to the path file where this repository is in your device
-  ->type the command "npx sequelize-cli db:migrate" ... this should create 2 tables in your perligo database
+  ->type the command "npx sequelize-cli db:migrate" ... this should create 1 table in your perligo database
 
 <b>In regards to converting a file</b>
  1. The .mp4 file that you wanna convert can be found in the same folder where you have cloned the perligo repository to your device
