@@ -7,3 +7,6 @@
   ->type the command "npx sequelize db:migrate" ... this should create 2 tables in your perligo database
   
 
+
+<b>Converting a file</b>
+
