@@ -9,10 +9,21 @@ While the capability of converting .mp4 files into .mp3 files remains true, the 
 1. In your phpmyadmin, create a database named 'perligo'
 2. assuming that you have cloned this repository
   ->proceed to a cmd terminal to the path file where this repository is in your device
-  ->type the command "npx sequelize db:migrate" ... this should create 2 tables in your perligo database
+  ->type the command "npx sequelize db:migrate" ... this should create 1 table in your perligo database
 
-<b>Converting a file</b><br>
-ASSUMPTIONS: 
+<b>In regards to converting a file</b>
  1. The .mp4 file that you wanna convert can be found in the same folder where you have cloned the perligo repository to your device
- STEPS:
-      
+ 2. When you provide the name of the .mp4 file that you want to convert, <b>DO NOT</b> include the <i>.mp4</i> part when inputting said name; same goes for the .mp3 name<br>
+e.g. (inputFile      ->   listen)   ... inputFile is a .mp4 file while listen is the .mp3 file converted from inputFile.mp4
+<br><br>
+
+<h2>Logging in to Perligo for the first time</h2>
+  
+You will be asked to chose to allow Perligo to save all conversions into a specific Google Drive. You will see a prompt that says: <br>
+  "Authorize this app by visiting this url:"<br>
+  This is followed by a link. You can browse to the URL provided on another machine, and then copy the authorization code back to the running sample. 
+  Click accept.Copy the code you're given, paste it into the command-line prompt, and press Enter.
+
+<i>Note that this will only happen when you've logged into Perligo for the first time. Everytime you convert something else, after your first log in, all .mp3 files will automatically be saved onto your device as well as your Google Drive</i>
+
+<i>To change which google drive account your files are to be saved, delete the token.json and repeat the steps mentioned when Logging in for the first time</i>
