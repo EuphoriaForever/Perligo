@@ -12,7 +12,7 @@ While the capability of converting .mp4 files into .mp3 files remains true, the 
   ->type the command "npx sequelize-cli db:migrate" ... this should create 1 table in your perligo database
 
 <b>In regards to converting a file</b>
- 1. The .mp4 file that you wanna convert can be found in the same folder where you have cloned the perligo repository to your device
+ 1. The .mp4 file that you wanna convert <b>MUST</b> be found in the same folder where you have cloned the perligo repository to your device
  2. When you provide the name of the .mp4 file that you want to convert, <b>DO NOT</b> include the <i>.mp4</i> part when inputting said name; same goes for the .mp3 name<br>
 e.g. (inputFile      ->   listen)   ... inputFile is a .mp4 file while listen is the .mp3 file converted from inputFile.mp4
 <br><br>
