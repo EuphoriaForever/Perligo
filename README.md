@@ -22,7 +22,7 @@ e.g. (inputFile      ->   listen)   ... inputFile is a .mp4 file while listen is
 You will be asked to chose to allow Perligo to save all conversions into a specific Google Drive. You will see a prompt that says: <br>
   "Authorize this app by visiting this url:"<br>
   This is followed by a link. You can browse to the URL provided on another machine, and then copy the authorization code back to the running sample. 
-  Click accept.Copy the code you're given, paste it into the command-line prompt, and press Enter.
+  Click accept.Copy the code you're given, paste it into the command-line prompt, and press Enter. Refresh the Perligo web app and login again.
 
 <i>Note that this will only happen when you've logged into Perligo for the first time. Everytime you convert something else, after your first log in, all .mp3 files will automatically be saved onto your device as well as your Google Drive</i>
 
