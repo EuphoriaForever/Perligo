@@ -14,9 +14,9 @@ While the capability of converting .mp4 files into .mp3 files remains true, the 
 <b>In regards to converting a file</b>
  1. The .mp4 file that you wanna convert <b>MUST</b> be found in the same folder where you have cloned the perligo repository to your device
  2. When you provide the name of the .mp4 file that you want to convert, <b>DO NOT</b> include the <i>.mp4</i> part when inputting said name; same goes for the .mp3 name<br>
-e.g. (inputFile      ->   listen)   ... inputFile is a .mp4 file while listen is the .mp3 file converted from inputFile.mp4
-<br><br>
-
+e.g. (inputFile      ->   listen)   ... inputFile is a .mp4 file while listen is the .mp3 file converted from inputFile.mp4<br>
+3.Conversion takes a few minutes (3-5 give or take). In the terminal where you ran the perligo app it will tell you when the .mp3 has been completely converted as well as when the .mp3 file has been uploaded to your Google Drive
+ <br><br>
 <h2>Logging in to Perligo for the first time</h2>
   
 You will be asked to chose to allow Perligo to save all conversions into a specific Google Drive. You will see a prompt that says: <br>
