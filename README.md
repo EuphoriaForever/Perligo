@@ -6,6 +6,8 @@ The initial plan was to create a web application that allows users to convert .m
 
 While the capability of converting .mp4 files into .mp3 files remains true, the developers have opted to scrap the idea of having Perligo have its own drive but allowing Perligo users instead to automatically upload their .mp3 files onto their respective Google Drives. Google Drives will allow for more storage capacity and allow them to share their .mp3 files to more people, even those without a Perligo account.
 
+Google Drive link with the node modules: https://drive.google.com/drive/folders/1iMhYmVBYkhXfVWgyhHfoaaRA2jaVi1hs?usp=sharing
+
 <b>In regards to creating the Perligo Database</b>
 1. In your phpmyadmin, create a database named 'perligo'
 2. assuming that you have cloned this repository
