@@ -6,7 +6,7 @@ The initial plan was to create a web application that allows users to convert .m
 
 While the capability of converting .mp4 files into .mp3 files remains true, the developers have opted to scrap the idea of having Perligo have its own drive but allowing Perligo users instead to automatically upload their .mp3 files onto their respective Google Drives. Google Drives will allow for more storage capacity and allow them to share their .mp3 files to more people, even those without a Perligo account.
 
-<i><u>Disclaimer</u></i>This repo is containing the working Perligo app, however it is not in vue implementation. A copy of Perligo in vue implementation,albeit not functional can be found in the GDrive link below<br><br>
+<u><b>Disclaimer</b></u> This repo is containing the working Perligo app, however it is not in vue implementation. A copy of Perligo in vue implementation,albeit not functional can be found in the GDrive link below<br><br>
 Google Drive link with the node modules: https://drive.google.com/drive/folders/1iMhYmVBYkhXfVWgyhHfoaaRA2jaVi1hs?usp=sharing
 
 <b>In regards to creating the Perligo Database</b>
